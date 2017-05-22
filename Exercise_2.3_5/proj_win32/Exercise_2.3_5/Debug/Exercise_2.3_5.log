@@ -1,0 +1,15 @@
+﻿生成启动时间为 2016/11/15 9:55:17。
+     1>项目“D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Exercise_2.3_5\Exercise_2.3_5.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\main.c
+         main.c
+     1>d:\visual studio\introduction to algorithms\exercise_2.3_5\src\main.c(29): warning C4013: “printf”未定义；假设外部返回 int
+     1>d:\visual studio\introduction to algorithms\exercise_2.3_5\src\main.c(30): warning C4013: “scanf”未定义；假设外部返回 int
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Debug\Exercise_2.3_5.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Debug\Exercise_2.3_5.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Debug\Exercise_2.3_5.lib" /MACHINE:X86 Debug\main.obj
+         Exercise_2.3_5.vcxproj -> D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Debug\Exercise_2.3_5.exe
+     1>已完成生成项目“D:\visual studio\Introduction to Algorithms\Exercise_2.3_5\proj_win32\Exercise_2.3_5\Exercise_2.3_5.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:00.54
