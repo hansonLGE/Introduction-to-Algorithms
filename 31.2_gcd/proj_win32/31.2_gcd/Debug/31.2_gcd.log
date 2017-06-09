@@ -1,0 +1,15 @@
+﻿生成启动时间为 2017/6/9 15:07:38。
+     1>项目“D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\31.2_gcd\31.2_gcd.vcxproj”在节点 2 上(Build 个目标)。
+     1>ClCompile:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TC /analyze- /errorReport:prompt ..\..\src\main.c
+         main.c
+     1>d:\visual studio\introduction to algorithms\31.2_gcd\src\main.c(15): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files (x86)\microsoft visual studio 12.0\vc\include\stdio.h(283) : 参见“scanf”的声明
+       Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\Debug\31.2_gcd.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\Debug\31.2_gcd.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\Debug\31.2_gcd.lib" /MACHINE:X86 Debug\main.obj
+         31.2_gcd.vcxproj -> D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\Debug\31.2_gcd.exe
+     1>已完成生成项目“D:\visual studio\Introduction to Algorithms\31.2_gcd\proj_win32\31.2_gcd\31.2_gcd.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:05.50
