@@ -24,6 +24,8 @@ typedef struct _item{
 	int *key;
 }item;
 
+int *set = NULL;
+
 void create_graph(vNode* adjlist, int n, int e) {
 	char ch, ch2;
 	eNode *p, *q;
@@ -105,6 +107,9 @@ void min_heapify(item* vec, int n, int i) {
 	}
 
 	if (min != i) {
+		set[vec[i - 1].v_idx - 1] = min;
+		set[vec[min - 1].v_idx - 1] = i;
+
 		memcpy(&tmp, &vec[i - 1], sizeof(item));
 		memcpy(&vec[i - 1], &vec[min - 1], sizeof(item));
 		memcpy(&vec[min - 1], &tmp, sizeof(item));
@@ -121,6 +126,9 @@ void build_min_heap(item* vec, int n) {
 
 item extract_min(item* vec, int* n) {
 	item key = vec[0];
+
+	set[vec[*n - 1].v_idx - 1] = 1;
+	set[vec[0].v_idx - 1] = 0;
 
 	memcpy(&vec[0], &vec[*n - 1], sizeof(item));
 
@@ -140,6 +148,9 @@ void decrease_key(item* vec, int i) {
 	item tmp;
 
 	while ((parent = get_parent(i)) && (*(vec[parent - 1].key) > *(vec[i - 1].key))){
+		set[vec[parent - 1].v_idx - 1] = i;
+		set[vec[i - 1].v_idx - 1] = parent;
+
 		memcpy(&tmp, &vec[parent - 1], sizeof(item));
 		memcpy(&vec[parent - 1], &vec[i - 1], sizeof(item));
 		memcpy(&vec[i - 1], &tmp, sizeof(item));
@@ -163,6 +174,8 @@ void initialize_single_source(vNode* adjlist, item* vec, int n,char ch) {
 
 		vec[i].v_idx = adjlist[i].idx;
 		vec[i].key = &adjlist[i].d;
+
+		set[i] = i + 1;
 	}
 }
 
@@ -179,7 +192,7 @@ int relax(vNode* adjlist, int u, int v, int w) {
 
 void dijkstra(vNode* adjlist, item* vec, int n, char s) {
 	int *m = &n;
-	int i = 0;
+	//int i = 0;
 	item u;
 	eNode* v = NULL;
 
@@ -192,13 +205,14 @@ void dijkstra(vNode* adjlist, item* vec, int n, char s) {
 
 		v = adjlist[u.v_idx - 1].link;
 		while (v != NULL) {
-			i = 0;
+			/*i = 0;
 			while (i < *m && vec[i].v_idx != v->v_idx) {
 				i++;
-			}
+			}*/
 
 			if (relax(adjlist, u.v_idx, v->v_idx, v->weight) == 1) {
-				decrease_key(vec, i + 1);
+				//decrease_key(vec, i + 1);
+				decrease_key(vec, set[v->v_idx - 1]);
 
 			}
 
@@ -236,6 +250,7 @@ int main(int argc, char** argv) {
 
 	printf("input the start point:");
 	scanf(" %c", &ch);
+	set = (int *)malloc(n * sizeof(int));
 	dijkstra(adjlist, vInfos, n, ch);
 
 	for (int i = 1; i <= n; i++) {
